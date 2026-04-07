@@ -479,7 +479,7 @@ with tab1:
         with col1:
             st.markdown(f"**#{i}**")
         with col2:
-            progress = data['sent'] / max([s[1]['sent'] for s in top_senders], 1)
+            progress = data['sent'] / max(max([s[1]['sent'] for s in top_senders]), 1)
             st.progress(progress, text=friend)
         with col3:
             st.caption(f"{data['sent']} bizums")
